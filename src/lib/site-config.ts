@@ -2,13 +2,7 @@
 
 export const CALENDLY_URL = "https://calendly.com/apopovic997/30min";
 
-export const CONTACT_EMAIL = "hello@pamela.agency";
-
-export const SOCIAL_LINKS = {
-  instagram: "#",
-  linkedin: "#",
-  x: "#",
-};
+export const CONTACT_EMAIL = "apopovic997@gmail.com";
 
 export type Service = {
   slug: string;

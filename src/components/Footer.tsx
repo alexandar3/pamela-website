@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import { CONTACT_EMAIL, SOCIAL_LINKS } from "@/lib/site-config";
+import { CONTACT_EMAIL } from "@/lib/site-config";
 
 export default function Footer() {
   return (
@@ -14,26 +14,6 @@ export default function Footer() {
           >
             {CONTACT_EMAIL}
           </a>
-          <div className="flex items-center gap-4">
-            <a
-              href={SOCIAL_LINKS.instagram}
-              className="transition-colors hover:text-neutral-300"
-            >
-              Instagram
-            </a>
-            <a
-              href={SOCIAL_LINKS.linkedin}
-              className="transition-colors hover:text-neutral-300"
-            >
-              LinkedIn
-            </a>
-            <a
-              href={SOCIAL_LINKS.x}
-              className="transition-colors hover:text-neutral-300"
-            >
-              X
-            </a>
-          </div>
           <p className="mt-2">
             © {new Date().getFullYear()} Pamela. All rights reserved.
           </p>
