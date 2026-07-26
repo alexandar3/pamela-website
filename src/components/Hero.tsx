@@ -30,8 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-xl text-balance text-lg text-neutral-400"
         >
-          Pamela is an AI agency delivering AI-driven creative production for
-          ambitious brands.
+          Pamela is an AI agency delivering high quality AI solutions for businesses. We help you integrate AI into your solutions.
         </motion.p>
 
         <motion.div
