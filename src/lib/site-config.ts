@@ -11,6 +11,9 @@ export type Service = {
   eyebrow: string;
   copy: string;
   ctaLabel: string;
+  // Optional proof-point stat rendered as a callout under the copy.
+  // Leave undefined for services that don't have one yet.
+  stat?: string;
 };
 
 // Add new services here later — the layout supports any number of entries
@@ -20,16 +23,17 @@ export const SERVICES: Service[] = [
     slug: "real-estate",
     name: "Real Estate Cinematic Videos",
     video: "/videos/real-estate-cinematic.mp4",
-    eyebrow: "For agents & developers",
-    copy: "Cinematic footage gets listings noticed, shared, and remembered — which means less time on market and stronger justification for asking price. Buyers scroll past photos in seconds; they stop for a film that makes the property feel like a place they already live.",
+    eyebrow: "For Real Estate Agencies",
+    copy: "Traditional real estate videos require a cameraman, editing, and time on location. We create high-quality cinematic property videos using AI from existing listing images—no filming required. The result is premium marketing content that captures attention, increases engagement, and helps listings stand out, while saving time and significantly reducing production costs.",
     ctaLabel: "Get a video like this",
+    stat: "64% report that video gives them higher confidence in making a purchase or rental decision.",
   },
   {
     slug: "product-motion",
     name: "Product Motion Design Videos",
     video: "/videos/product-motion-design.mp4",
-    eyebrow: "For e-commerce & DTC brands",
-    copy: "Motion content out-performs static creative on every metric that matters: higher click-through, higher conversion, more time-on-page. On a feed full of photos, a product that moves is the one people stop for.",
+    eyebrow: "For Product-Based Businesses",
+    copy: "Static images are easy to ignore. Cinematic video stops the scroll, showcases your product in action, and creates a stronger emotional connection with potential customers—leading to higher engagement, more clicks, and better conversion rates.",
     ctaLabel: "Get a video like this",
   },
 ];

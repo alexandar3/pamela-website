@@ -5,6 +5,26 @@ import clsx from "clsx";
 import ShowcaseVideo from "./ShowcaseVideo";
 import { CALENDLY_URL, SERVICES } from "@/lib/site-config";
 
+function StatQuote({ stat }: { stat: string }) {
+  const match = stat.match(/^(\d+%)\s*(.*)$/);
+  if (!match) {
+    return (
+      <p className="text-sm italic leading-relaxed text-amber-300/90">
+        “{stat}”
+      </p>
+    );
+  }
+  const [, figure, rest] = match;
+  return (
+    <p className="text-sm italic leading-relaxed text-amber-300/90">
+      <span className="mr-1.5 font-display text-lg font-medium not-italic text-amber-300">
+        {figure}
+      </span>
+      {rest}
+    </p>
+  );
+}
+
 export default function Services() {
   return (
     <section id="services" className="px-6 py-28 sm:py-36">
@@ -17,7 +37,7 @@ export default function Services() {
           className="mb-16 max-w-2xl"
         >
           <p className="text-sm font-medium uppercase tracking-widest text-neutral-500">
-            Current services
+            Portfolio
           </p>
           <h2 className="mt-3 font-display text-3xl tracking-tight text-neutral-50 sm:text-4xl">
             What we do
@@ -49,6 +69,11 @@ export default function Services() {
                 <p className="mt-4 text-base leading-relaxed text-neutral-400">
                   {service.copy}
                 </p>
+                {service.stat && (
+                  <div className="mt-6 border-l-2 border-amber-400/50 pl-4">
+                    <StatQuote stat={service.stat} />
+                  </div>
+                )}
                 <a
                   href={CALENDLY_URL}
                   target="_blank"
