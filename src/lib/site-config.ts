@@ -38,16 +38,18 @@ export const SERVICES: Service[] = [
   },
 ];
 
+export type PricingAccent = "blue" | "green" | "purple";
+
 export type PricingTier = {
   id: string;
   name: string;
   price: number;
   currency: string;
-  clips: number;
-  description: string;
-  features: string[];
-  turnaround: string;
-  revisions: string;
+  tagline: string;
+  badge?: string;
+  accent: PricingAccent;
+  includedFeatures: string[];
+  excludedFeatures: string[];
   highlighted?: boolean;
 };
 
@@ -55,52 +57,49 @@ export type PricingTier = {
 // needs to change.
 export const PRICING_TIERS: PricingTier[] = [
   {
-    id: "standard",
-    name: "Standard",
-    price: 250,
+    id: "starter",
+    name: "Starter",
+    price: 500,
     currency: "$",
-    clips: 10,
-    description: "A solid starting package for testing what AI-driven production can do for you.",
-    features: [
-      "10 finished clips",
-      "Standard-tier AI models (Kling / Seedance-class)",
-      "720p–1080p delivery",
+    tagline: "For agents with a few active listings",
+    accent: "blue",
+    includedFeatures: [
+      "3 cinematic listing videos a month",
+      "Delivered ready to post",
+      "First video free to try",
     ],
-    turnaround: "7 business days",
-    revisions: "1 round of revisions",
+    excludedFeatures: ["Photo staging not included", "Social media not included"],
   },
   {
     id: "pro",
     name: "Pro",
-    price: 650,
+    price: 1250,
     currency: "$",
-    clips: 30,
-    description: "The most popular tier — more volume, premium models where it matters, faster delivery.",
-    features: [
-      "30 finished clips",
-      "Premium models where they improve the shot (Veo / Sora-class)",
-      "1080p delivery",
-      "Vertical + horizontal exports",
+    tagline: "For busy agents who post often",
+    badge: "MOST POPULAR",
+    accent: "green",
+    includedFeatures: [
+      "10 cinematic listing videos a month",
+      "Virtual staging on your photos",
+      "Photo enhancement and lighting",
+      "First video free to try",
     ],
-    turnaround: "5 business days",
-    revisions: "2 rounds of revisions",
+    excludedFeatures: ["Social media not included"],
     highlighted: true,
   },
   {
     id: "pro-max",
     name: "Pro Max",
-    price: 1200,
+    price: 2500,
     currency: "$",
-    clips: 60,
-    description: "For teams running high-volume content pipelines who need top quality, fast.",
-    features: [
-      "60 finished clips",
-      "Premium models throughout",
-      "Priority turnaround",
-      "Full multi-platform export pack",
-      "Dedicated project channel",
+    tagline: "Replace your whole marketing agency",
+    accent: "purple",
+    includedFeatures: [
+      "25 cinematic listing videos a month",
+      "Virtual staging and photo enhancement",
+      "We deliver posting-ready captions and hashtags for each video",
+      "First video free to try",
     ],
-    turnaround: "3 business days",
-    revisions: "Unlimited revisions",
+    excludedFeatures: [],
   },
 ];
