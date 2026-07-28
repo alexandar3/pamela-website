@@ -44,7 +44,7 @@ Current videos:
 - `public/videos/real-estate-cinematic.mp4` — Real Estate Cinematic Videos
 - `public/videos/product-motion-design.mp4` — Product Motion Design Videos
 
-## Project structure 
+## Project structure   
 
 ```
 src/
