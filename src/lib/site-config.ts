@@ -24,8 +24,8 @@ export const SERVICES: Service[] = [
   {
     slug: "real-estate",
     name: "Real Estate Cinematic Videos",
-    video: "/videos/real-estate-cinematic.mp4",
-    eyebrow: "For Real Estate Agencies",
+    video: "/pamela-website/videos/real-estate-cinematic.mp4",
+        eyebrow: "For Real Estate Agencies",
     copy: "Traditional real estate videos require a cameraman, editing, and time on location. We create high-quality cinematic property videos using AI from existing listing images—no filming required. The result is premium marketing content that captures attention, increases engagement, and helps listings stand out, while saving time and significantly reducing production costs.",
     ctaLabel: "Get a video like this",
     stat: "64% report that video gives them higher confidence in making a purchase or rental decision.",
@@ -33,8 +33,8 @@ export const SERVICES: Service[] = [
   {
     slug: "product-motion",
     name: "Product Motion Design Videos",
-    video: "/videos/product-motion-design.mp4",
-    eyebrow: "For Product-Based Businesses",
+    video: "/pamela-website/videos/product-motion-design.mp4",
+        eyebrow: "For Product-Based Businesses",
     copy: "Static images are easy to ignore. Cinematic video stops the scroll, showcases your product in action, and creates a stronger emotional connection with potential customers—leading to higher engagement, more clicks, and better conversion rates.",
     ctaLabel: "Get a video like this",
   },
