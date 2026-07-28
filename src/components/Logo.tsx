@@ -10,7 +10,7 @@ export default function Logo({ className }: { className?: string }) {
       )}
     >
       <Image
-        src="/images/logo.png"
+        src="/pamela-website/images/logo.png"
         alt=""
         width={24}
         height={24}
