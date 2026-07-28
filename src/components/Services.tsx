@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import ShowcaseVideo from "./ShowcaseVideo";
+import LandingPageMockup from "./LandingPageMockup";
 import { CALENDLY_URL, SERVICES } from "@/lib/site-config";
 
 function StatQuote({ stat }: { stat: string }) {
@@ -57,7 +58,11 @@ export default function Services() {
                 i % 2 === 1 && "md:[&>*:first-child]:order-2",
               )}
             >
-              <ShowcaseVideo src={service.video} label={service.name} />
+              {service.video ? (
+                <ShowcaseVideo src={service.video} label={service.name} />
+              ) : (
+                <LandingPageMockup label={service.name} />
+              )}
 
               <div>
                 <p className="text-sm font-medium uppercase tracking-widest text-neutral-500">

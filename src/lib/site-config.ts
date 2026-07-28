@@ -7,7 +7,9 @@ export const CONTACT_EMAIL = "apopovic997@gmail.com";
 export type Service = {
   slug: string;
   name: string;
-  video: string;
+  // Leave undefined for services without a real photo/video yet — the
+  // layout falls back to an animated wireframe mockup instead.
+  video?: string;
   eyebrow: string;
   copy: string;
   ctaLabel: string;
@@ -35,6 +37,14 @@ export const SERVICES: Service[] = [
     eyebrow: "For Product-Based Businesses",
     copy: "Static images are easy to ignore. Cinematic video stops the scroll, showcases your product in action, and creates a stronger emotional connection with potential customers—leading to higher engagement, more clicks, and better conversion rates.",
     ctaLabel: "Get a video like this",
+  },
+  {
+    slug: "landing-pages",
+    name: "Landing Page Websites",
+    eyebrow: "For Small & Medium Businesses",
+    copy: "Most small businesses either don't have a website or are stuck with one that hasn't been touched in years. We design and build fast, modern landing pages—from copy to layout to launch—using AI to move at a fraction of the usual cost and timeline. The result is a site that actually converts visitors into customers, live in days instead of months.",
+    ctaLabel: "Get a website like this",
+    stat: "75% of consumers admit to judging a business's credibility based on its website design.",
   },
 ];
 

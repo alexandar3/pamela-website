@@ -2,7 +2,15 @@
 
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { CALENDLY_URL, PRICING_TIERS, type PricingAccent } from "@/lib/site-config";
+import { CALENDLY_URL, PRICING_TIERS, SERVICES, type PricingAccent } from "@/lib/site-config";
+
+const PRICED_SERVICE_SLUG = "real-estate";
+
+function joinWithAnd(items: string[]): string {
+  if (items.length <= 1) return items.join("");
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+}
 
 const ACCENT_CLASSES: Record<PricingAccent, { price: string; check: string; badge: string }> = {
   blue: {
@@ -23,6 +31,10 @@ const ACCENT_CLASSES: Record<PricingAccent, { price: string; check: string; badg
 };
 
 export default function Pricing() {
+  const otherServiceNames = SERVICES.filter(
+    (service) => service.slug !== PRICED_SERVICE_SLUG,
+  ).map((service) => service.name);
+
   return (
     <section id="pricing" className="px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-6xl">
@@ -33,7 +45,10 @@ export default function Pricing() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-3xl tracking-tight text-neutral-50 sm:text-4xl">
+          <p className="text-sm font-medium uppercase tracking-widest text-neutral-500">
+            Pricing for Real Estate Cinematic Videos
+          </p>
+          <h2 className="mt-3 font-display text-3xl tracking-tight text-neutral-50 sm:text-4xl">
             Listing Content, Done For You
           </h2>
           <p className="mt-4 text-base text-neutral-400">
@@ -143,6 +158,19 @@ export default function Pricing() {
             );
           })}
         </div>
+
+        {otherServiceNames.length > 0 && (
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="mt-10 text-center text-sm text-neutral-500"
+          >
+            Pricing for {joinWithAnd(otherServiceNames)} depends on scope—we'll
+            work it out together on a call.
+          </motion.p>
+        )}
       </div>
     </section>
   );
