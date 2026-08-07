@@ -31,11 +31,11 @@ export const SERVICES: Service[] = [
     stat: "64% report that video gives them higher confidence in making a purchase or rental decision.",
   },
   {
-    slug: "product-motion",
-    name: "Product Motion Design Videos",
+    slug: "ai-marketing",
+    name: "AI Marketing Videos",
     video: "/videos/product-motion-design.mp4",
-        eyebrow: "For Product-Based Businesses",
-    copy: "Static images are easy to ignore. Cinematic video stops the scroll, showcases your product in action, and creates a stronger emotional connection with potential customers—leading to higher engagement, more clicks, and better conversion rates.",
+        eyebrow: "For Businesses",
+    copy: "A full marketing team means salaries, contracts, and slow turnaround. We create AI marketing videos in bundles—ads, promos, social content—giving businesses a steady stream of scroll-stopping video at a fraction of the cost and speed of an in-house team or agency.",
     ctaLabel: "Get a video like this",
   },
   {
@@ -48,68 +48,3 @@ export const SERVICES: Service[] = [
   },
 ];
 
-export type PricingAccent = "blue" | "green" | "purple";
-
-export type PricingTier = {
-  id: string;
-  name: string;
-  price: number;
-  currency: string;
-  tagline: string;
-  badge?: string;
-  accent: PricingAccent;
-  includedFeatures: string[];
-  excludedFeatures: string[];
-  highlighted?: boolean;
-};
-
-// Single source of truth for pricing. Edit numbers/copy here — nothing else
-// needs to change.
-export const PRICING_TIERS: PricingTier[] = [
-  {
-    id: "starter",
-    name: "Starter",
-    price: 500,
-    currency: "$",
-    tagline: "For agents with a few active listings",
-    accent: "blue",
-    includedFeatures: [
-      "3 cinematic listing videos a month",
-      "Delivered ready to post",
-      "First video free to try",
-    ],
-    excludedFeatures: ["Photo staging not included", "Social media not included"],
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    price: 1250,
-    currency: "$",
-    tagline: "For busy agents who post often",
-    badge: "MOST POPULAR",
-    accent: "green",
-    includedFeatures: [
-      "10 cinematic listing videos a month",
-      "Virtual staging on your photos",
-      "Photo enhancement and lighting",
-      "First video free to try",
-    ],
-    excludedFeatures: ["Social media not included"],
-    highlighted: true,
-  },
-  {
-    id: "pro-max",
-    name: "Pro Max",
-    price: 2500,
-    currency: "$",
-    tagline: "Replace your whole marketing agency",
-    accent: "purple",
-    includedFeatures: [
-      "25 cinematic listing videos a month",
-      "Virtual staging and photo enhancement",
-      "We deliver posting-ready captions and hashtags for each video",
-      "First video free to try",
-    ],
-    excludedFeatures: [],
-  },
-];

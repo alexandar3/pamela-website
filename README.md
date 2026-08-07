@@ -33,7 +33,6 @@ Almost everything you'll want to change lives in [`src/lib/site-config.ts`](src/
 - **Calendly link** — update `CALENDLY_URL`.
 - **Contact email / social links** — update `CONTACT_EMAIL` and `SOCIAL_LINKS`.
 - **Services** — edit the `SERVICES` array. Each entry is a video + copy block rendered by the Services section. Add a new object to the array to add a new service showcase — no layout changes needed.
-- **Pricing** — edit the `PRICING_TIERS` array. Each tier is a plain object (price, clip count, features, turnaround, revisions). Set `highlighted: true` on the tier you want visually emphasized as the recommended option.
 
 ## Adding portfolio videos
 
@@ -42,7 +41,7 @@ Drop new `.mp4` files into `public/videos/`, then reference them (e.g. `/videos/
 Current videos:
 
 - `public/videos/real-estate-cinematic.mp4` — Real Estate Cinematic Videos
-- `public/videos/product-motion-design.mp4` — Product Motion Design Videos
+- `public/videos/product-motion-design.mp4` — AI Marketing Videos
 
 ## Project structure   
 
@@ -59,9 +58,8 @@ src/
     Services.tsx       Video + copy showcase for each service
     ShowcaseVideo.tsx  Reusable autoplay/click-to-unmute video player
     WhyAI.tsx          Three-value-prop differentiator section
-    Pricing.tsx        Pricing cards driven by PRICING_TIERS config
     FinalCta.tsx        Repeated headline + CTA
     Footer.tsx         Footer with contact/social links
   lib/
-    site-config.ts     Single source of truth for links, services, pricing
+    site-config.ts     Single source of truth for links, services
 ```
