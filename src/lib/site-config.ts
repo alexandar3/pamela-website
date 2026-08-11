@@ -1,8 +1,12 @@
 // Central place to edit site-wide constants without touching component code.
 
+export const SITE_URL = "https://pamelatech.com";
+
 export const CALENDLY_URL = "https://calendly.com/apopovic997/30min";
 
 export const CONTACT_EMAIL = "apopovic997@gmail.com";
+
+export const INSTAGRAM_URL = "https://www.instagram.com/pamelatech.ai/";
 
 export type Service = {
   slug: string;
