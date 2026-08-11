@@ -12,8 +12,35 @@ import { translations, type Language, type Translation } from "./translations";
 
 const STORAGE_KEY = "pamela-lang";
 
+// Countries where Serbian is the natural default for a first-time visitor.
+const SR_DEFAULT_COUNTRIES = new Set(["RS", "ME", "HR", "BA"]);
+
 function isLanguage(value: string | null): value is Language {
   return value === "en" || value === "sr";
+}
+
+// GitHub Pages serves this site as static files with no server/edge runtime,
+// so there's no request-time geo-IP available. This does a best-effort,
+// client-side country lookup instead — silently gives up on any failure,
+// and never overrides a language the visitor already picked.
+async function detectCountryDefaultLang(): Promise<Language | null> {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 2500);
+    const res = await fetch("https://get.geojs.io/v1/ip/country.json", {
+      signal: controller.signal,
+    });
+    clearTimeout(timeout);
+    if (!res.ok) return null;
+    const data: unknown = await res.json();
+    const code =
+      typeof data === "object" && data !== null && "country_code" in data
+        ? String((data as { country_code: unknown }).country_code).toUpperCase()
+        : "";
+    return SR_DEFAULT_COUNTRIES.has(code) ? "sr" : null;
+  } catch {
+    return null;
+  }
 }
 
 function readStoredLang(): Language {
@@ -54,6 +81,25 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  useEffect(() => {
+    if (window.localStorage.getItem(STORAGE_KEY) !== null) return;
+
+    let cancelled = false;
+    detectCountryDefaultLang().then((detected) => {
+      if (
+        !cancelled &&
+        detected &&
+        window.localStorage.getItem(STORAGE_KEY) === null
+      ) {
+        setStoredLang(detected);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang;
