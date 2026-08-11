@@ -22,7 +22,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-balance font-display text-5xl font-extrabold leading-[1.05] tracking-tighter text-neutral-50 sm:text-6xl md:text-7xl"
+          className="text-outline text-balance font-display text-5xl font-extrabold leading-[1.05] tracking-tighter sm:text-6xl md:text-7xl"
         >
           {t.hero.heading}
         </motion.h1>

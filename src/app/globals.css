@@ -21,3 +21,16 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Bold outline heading style: solid fill as a fallback, hollow/stroked
+   text on browsers that support it. */
+.text-outline {
+  color: var(--foreground);
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--foreground);
+  }
+}

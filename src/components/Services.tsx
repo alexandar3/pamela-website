@@ -43,7 +43,7 @@ export default function Services() {
           <p className="text-sm font-medium uppercase tracking-widest text-neutral-500">
             {t.services.eyebrow}
           </p>
-          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-neutral-50 sm:text-4xl">
+          <h2 className="text-outline mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             {t.services.heading}
           </h2>
         </motion.div>
@@ -73,7 +73,7 @@ export default function Services() {
                   <p className="text-sm font-medium uppercase tracking-widest text-neutral-500">
                     {text.eyebrow}
                   </p>
-                  <h3 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-neutral-50 sm:text-3xl">
+                  <h3 className="text-outline mt-3 font-display text-2xl font-extrabold tracking-tight sm:text-3xl">
                     {text.name}
                   </h3>
                   <p className="mt-4 text-base leading-relaxed text-neutral-400">

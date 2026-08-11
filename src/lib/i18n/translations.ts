@@ -128,7 +128,7 @@ export const translations: Record<Language, Translation> = {
         },
         "landing-pages": {
           eyebrow: "Za mala i srednja preduzeća",
-          name: "Landing stranice",
+          name: "Izrada Web Sajtova",
           copy: "Većina malih biznisa ili nema sajt ili koristi onaj koji nije menjan godinama. Mi dizajniramo i izrađujemo brze, moderne landing stranice—od teksta, preko dizajna, do lansiranja—koristeći AI da bismo radili mnogo brže i jeftinije nego inače. Rezultat je sajt koji zaista pretvara posetioce u kupce, dostupan za nekoliko dana umesto meseci.",
           ctaLabel: "Zatražite ovakav sajt",
           stat: "75% potrošača priznaje da procenjuje kredibilitet biznisa na osnovu dizajna njegovog sajta.",
