@@ -35,7 +35,7 @@ export default function WhyAI() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-outline text-center font-display text-3xl font-extrabold tracking-tight sm:text-4xl"
+          className="text-center font-display text-3xl font-extrabold tracking-tight text-neutral-50 sm:text-4xl"
         >
           {t.whyAI.heading}
         </motion.h2>
