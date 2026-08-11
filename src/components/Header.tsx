@@ -3,8 +3,41 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Logo from "./Logo";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
+import { LANGUAGES } from "@/lib/i18n/translations";
+
+function LanguageSwitcher() {
+  const { lang, setLang } = useLanguage();
+
+  return (
+    <div
+      aria-label="Language"
+      className="flex items-center gap-1.5 text-sm font-medium tracking-wide text-neutral-400"
+    >
+      {LANGUAGES.map((code, i) => (
+        <span key={code} className="flex items-center gap-1.5">
+          {i > 0 && <span className="text-neutral-600">|</span>}
+          {code === lang ? (
+            <span className="text-neutral-50" aria-current="true">
+              {code.toUpperCase()}
+            </span>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setLang(code)}
+              className="transition-colors hover:text-neutral-100"
+            >
+              {code.toUpperCase()}
+            </button>
+          )}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 export default function Header() {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,10 +56,11 @@ export default function Header() {
           : "bg-transparent border-b border-transparent",
       )}
     >
-      <div className="mx-auto flex max-w-6xl items-center px-6 py-4">
-        <a href="#top" aria-label="Pamela home">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="#top" aria-label={t.header.homeLabel}>
           <Logo />
         </a>
+        <LanguageSwitcher />
       </div>
     </header>
   );

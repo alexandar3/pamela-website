@@ -1,7 +1,12 @@
+"use client";
+
 import Logo from "./Logo";
 import { CONTACT_EMAIL } from "@/lib/site-config";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="border-t border-white/10 px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
@@ -15,7 +20,7 @@ export default function Footer() {
             {CONTACT_EMAIL}
           </a>
           <p className="mt-2">
-            © {new Date().getFullYear()} Pamela. All rights reserved.
+            © {new Date().getFullYear()} Pamela. {t.footer.rights}
           </p>
         </div>
       </div>

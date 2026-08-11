@@ -5,7 +5,7 @@ export default function Logo({ className }: { className?: string }) {
   return (
     <span
       className={clsx(
-        "inline-flex items-center gap-2 font-display text-xl tracking-tight text-neutral-50",
+        "inline-flex items-center gap-2 font-display text-xl font-extrabold tracking-tight text-neutral-50",
         className,
       )}
     >

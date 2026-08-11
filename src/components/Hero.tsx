@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { CALENDLY_URL } from "@/lib/site-config";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="top"
@@ -19,9 +22,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-balance font-display text-5xl leading-[1.05] tracking-tight text-neutral-50 sm:text-6xl md:text-7xl"
+          className="text-balance font-display text-5xl font-extrabold leading-[1.05] tracking-tighter text-neutral-50 sm:text-6xl md:text-7xl"
         >
-          Add AI to your experience.
+          {t.hero.heading}
         </motion.h1>
 
         <motion.p
@@ -30,7 +33,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-xl text-balance text-lg text-neutral-400"
         >
-          Pamela is an AI agency delivering high quality AI solutions for businesses. We help you integrate AI into your solutions.
+          {t.hero.subheading}
         </motion.p>
 
         <motion.div
@@ -43,9 +46,10 @@ export default function Hero() {
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-neutral-50 px-7 py-3.5 text-base font-medium text-neutral-900 transition-transform hover:scale-[1.03] hover:bg-neutral-200"
+            className="inline-flex items-center gap-2 rounded-full bg-neutral-50 px-7 py-3.5 text-base font-medium text-neutral-900 transition-transform hover:scale-[1.03] hover:bg-neutral-200"
           >
-            Book a call
+            {t.hero.cta}
+            <span aria-hidden>→</span>
           </a>
         </motion.div>
       </div>
