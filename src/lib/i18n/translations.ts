@@ -7,6 +7,7 @@ type ServiceCopy = {
   name: string;
   copy: string;
   ctaLabel: string;
+  price: string;
   stat?: string;
 };
 
@@ -57,6 +58,7 @@ export const translations: Record<Language, Translation> = {
           name: "Real Estate Cinematic Videos",
           copy: "Traditional real estate videos require a cameraman, editing, and time on location. We create high-quality cinematic property videos using AI from existing listing images—no filming required. The result is premium marketing content that captures attention, increases engagement, and helps listings stand out, while saving time and significantly reducing production costs.",
           ctaLabel: "Get a video like this",
+          price: "From €25 / video",
           stat: "64% report that video gives them higher confidence in making a purchase or rental decision.",
         },
         "ai-marketing": {
@@ -64,12 +66,14 @@ export const translations: Record<Language, Translation> = {
           name: "AI Marketing Videos",
           copy: "A full marketing team means salaries, contracts, and slow turnaround. We create AI marketing videos in bundles—ads, promos, social content—giving businesses a steady stream of scroll-stopping video at a fraction of the cost and speed of an in-house team or agency.",
           ctaLabel: "Get a video like this",
+          price: "Custom pricing",
         },
         "landing-pages": {
           eyebrow: "For Small & Medium Businesses",
           name: "Landing Page Websites",
           copy: "Most small businesses either don't have a website or are stuck with one that hasn't been touched in years. We design and build fast, modern landing pages—from copy to layout to launch—using AI to move at a fraction of the usual cost and timeline. The result is a site that actually converts visitors into customers, live in days instead of months.",
           ctaLabel: "Get a website like this",
+          price: "From €250",
           stat: "75% of consumers admit to judging a business's credibility based on its website design.",
         },
       },
@@ -115,9 +119,10 @@ export const translations: Record<Language, Translation> = {
       items: {
         "real-estate": {
           eyebrow: "Za agencije za nekretnine",
-          name: "Kinematografski video snimci nekretnina",
+          name: "AI Listing Video Snimci",
           copy: "Tradicionalni video snimci nekretnina zahtevaju snimatelja, montažu i vreme provedeno na terenu. Mi kreiramo kinematografske video snimke nekretnina uz pomoć veštačke inteligencije na osnovu postojećih fotografija oglasa—bez potrebe za snimanjem. Rezultat je premium marketinški sadržaj koji privlači pažnju, povećava angažovanost i izdvaja vaše oglase, uz uštedu vremena i značajno smanjenje troškova produkcije.",
           ctaLabel: "Zatražite ovakav video",
+          price: "Od 25€ / video",
           stat: "64% ispitanika kaže da im video daje veće poverenje prilikom donošenja odluke o kupovini ili iznajmljivanju.",
         },
         "ai-marketing": {
@@ -125,12 +130,14 @@ export const translations: Record<Language, Translation> = {
           name: "AI marketing video zapisi",
           copy: "Ceo marketinški tim znači plate, ugovore i sporu realizaciju. Mi kreiramo AI marketing video zapise u paketima—reklame, promocije, sadržaj za društvene mreže—obezbeđujući biznisima kontinuiran priliv upečatljivog video sadržaja uz mnogo nižu cenu i brže vreme isporuke od internog tima ili agencije.",
           ctaLabel: "Zatražite ovakav video",
+          price: "Po dogovoru",
         },
         "landing-pages": {
           eyebrow: "Za mala i srednja preduzeća",
           name: "Izrada Web Sajtova",
           copy: "Većina malih biznisa ili nema sajt ili koristi onaj koji nije menjan godinama. Mi dizajniramo i izrađujemo brze, moderne landing stranice—od teksta, preko dizajna, do lansiranja—koristeći AI da bismo radili mnogo brže i jeftinije nego inače. Rezultat je sajt koji zaista pretvara posetioce u kupce, dostupan za nekoliko dana umesto meseci.",
           ctaLabel: "Zatražite ovakav sajt",
+          price: "Od 250€",
           stat: "75% potrošača priznaje da procenjuje kredibilitet biznisa na osnovu dizajna njegovog sajta.",
         },
       },

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import ShowcaseVideo from "./ShowcaseVideo";
 import LandingPageMockup from "./LandingPageMockup";
+import PriceBadge from "./PriceBadge";
 import { CALENDLY_URL, SERVICES } from "@/lib/site-config";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
@@ -63,11 +64,14 @@ export default function Services() {
                   i % 2 === 1 && "md:[&>*:first-child]:order-2",
                 )}
               >
-                {service.video ? (
-                  <ShowcaseVideo src={service.video} label={text.name} />
-                ) : (
-                  <LandingPageMockup label={text.name} />
-                )}
+                <div className="relative">
+                  {service.video ? (
+                    <ShowcaseVideo src={service.video} label={text.name} />
+                  ) : (
+                    <LandingPageMockup label={text.name} />
+                  )}
+                  <PriceBadge price={text.price} />
+                </div>
 
                 <div>
                   <p className="text-sm font-medium uppercase tracking-widest text-neutral-500">
