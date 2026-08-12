@@ -3,7 +3,6 @@
 :root {
   --background: #0a0a0b;
   --foreground: #f5f5f4;
-  --accent-yellow: #fbbf24;
 }
 
 @theme inline {
@@ -38,6 +37,6 @@ html {
 
 /* Solid words inside an outlined heading. */
 .text-outline .text-solid {
-  color: var(--accent-yellow);
+  color: var(--foreground);
   -webkit-text-stroke: 0;
 }
