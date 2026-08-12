@@ -70,7 +70,7 @@ export const translations: Record<Language, Translation> = {
       items: {
         "real-estate": {
           eyebrow: "For Real Estate Agencies",
-          name: "Real Estate Cinematic Videos",
+          name: "Real Estate Videos",
           copy: "Traditional real estate videos require a cameraman, editing, and time on location. We create high-quality cinematic property videos using AI from existing listing images—no filming required. The result is premium marketing content that captures attention, increases engagement, and helps listings stand out, while saving time and significantly reducing production costs.",
           ctaLabel: "Get a video like this",
           price: "From €25 / video",
@@ -78,14 +78,14 @@ export const translations: Record<Language, Translation> = {
         },
         "ai-marketing": {
           eyebrow: "For Businesses",
-          name: "AI Marketing Videos",
+          name: "Marketing Videos",
           copy: "A full marketing team means salaries, contracts, and slow turnaround. We create AI marketing videos in bundles—ads, promos, social content—giving businesses a steady stream of scroll-stopping video at a fraction of the cost and speed of an in-house team or agency.",
           ctaLabel: "Get a video like this",
           price: "Custom pricing",
         },
         "landing-pages": {
           eyebrow: "For Small & Medium Businesses",
-          name: "Landing Page Websites",
+          name: "Building Websites",
           copy: "Most small businesses either don't have a website or are stuck with one that hasn't been touched in years. We design and build fast, modern landing pages—from copy to layout to launch—using AI to move at a fraction of the usual cost and timeline. The result is a site that actually converts visitors into customers, live in days instead of months.",
           ctaLabel: "Get a website like this",
           price: "From €250",
@@ -141,7 +141,7 @@ export const translations: Record<Language, Translation> = {
       items: {
         "real-estate": {
           eyebrow: "Za agencije za nekretnine",
-          name: "AI Listing Video Snimci",
+          name: "Video Snimci Nekretnina",
           copy: "Tradicionalni video snimci nekretnina zahtevaju snimatelja, montažu i vreme provedeno na terenu. Mi kreiramo kinematografske video snimke nekretnina uz pomoć veštačke inteligencije na osnovu postojećih fotografija oglasa—bez potrebe za snimanjem. Rezultat je premium marketinški sadržaj koji privlači pažnju, povećava angažovanost i izdvaja vaše oglase, uz uštedu vremena i značajno smanjenje troškova produkcije.",
           ctaLabel: "Zatražite ovakav video",
           price: "Od 25€ / video",
@@ -149,7 +149,7 @@ export const translations: Record<Language, Translation> = {
         },
         "ai-marketing": {
           eyebrow: "Za biznise",
-          name: "AI marketing video zapisi",
+          name: "Marketing Sadržaj",
           copy: "Ceo marketinški tim znači plate, ugovore i sporu realizaciju. Mi kreiramo AI marketing video zapise u paketima—reklame, promocije, sadržaj za društvene mreže—obezbeđujući biznisima kontinuiran priliv upečatljivog video sadržaja uz mnogo nižu cenu i brže vreme isporuke od internog tima ili agencije.",
           ctaLabel: "Zatražite ovakav video",
           price: "Po dogovoru",
