@@ -14,7 +14,7 @@ export default function HeadlineUnderline() {
       <motion.path
         d="M6 25 C 90 8, 150 38, 230 20 C 320 0, 400 36, 480 16 C 520 6, 555 18, 578 12"
         fill="none"
-        stroke="#fbbf24"
+        stroke="var(--foreground)"
         strokeWidth="6"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -25,7 +25,7 @@ export default function HeadlineUnderline() {
       <motion.path
         d="M578 12 Q 596 4 592 22"
         fill="none"
-        stroke="#fbbf24"
+        stroke="var(--foreground)"
         strokeWidth="6"
         strokeLinecap="round"
         initial={{ pathLength: 0, opacity: 0 }}
