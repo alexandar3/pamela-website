@@ -15,8 +15,16 @@ export type Translation = {
   header: {
     homeLabel: string;
   };
+  nav: {
+    home: string;
+    services: string;
+    about: string;
+    contact: string;
+  };
   hero: {
     heading: string;
+    // Substrings of `heading` to render as solid white instead of outlined.
+    headingHighlights: string[];
     subheading: string;
     cta: string;
   };
@@ -43,8 +51,15 @@ export const translations: Record<Language, Translation> = {
     header: {
       homeLabel: "Pamela home",
     },
+    nav: {
+      home: "Home",
+      services: "Services",
+      about: "About",
+      contact: "Contact",
+    },
     hero: {
       heading: "Add AI to your experience.",
+      headingHighlights: ["AI", "experience."],
       subheading:
         "Pamela is an AI agency delivering high quality AI solutions for businesses. We help you integrate AI into your solutions.",
       cta: "Book a call",
@@ -107,8 +122,15 @@ export const translations: Record<Language, Translation> = {
     header: {
       homeLabel: "Pamela početna",
     },
+    nav: {
+      home: "Početna",
+      services: "Usluge",
+      about: "O nama",
+      contact: "Kontakt",
+    },
     hero: {
       heading: "Unesite AI u vaše poslovanje.",
+      headingHighlights: ["AI", "poslovanje."],
       subheading:
         "Pamela je AI agencija koja isporučuje visokokvalitetna AI rešenja za biznise. Pomažemo vam da integrišete AI u svoje poslovanje.",
       cta: "Zakažite poziv",

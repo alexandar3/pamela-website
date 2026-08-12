@@ -8,7 +8,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-white/10 px-6 py-12">
+    <footer id="contact" className="scroll-mt-24 border-t border-white/10 px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
         <Logo />
 

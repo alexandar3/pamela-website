@@ -32,7 +32,7 @@ export default function Services() {
   const { t } = useLanguage();
 
   return (
-    <section id="services" className="px-6 py-28 sm:py-36">
+    <section id="services" className="scroll-mt-24 px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -55,12 +55,13 @@ export default function Services() {
             return (
               <motion.div
                 key={service.slug}
+                id={`service-${service.slug}`}
                 initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 className={clsx(
-                  "grid items-center gap-10 md:grid-cols-2 md:gap-16",
+                  "grid scroll-mt-24 items-center gap-10 md:grid-cols-2 md:gap-16",
                   i % 2 === 1 && "md:[&>*:first-child]:order-2",
                 )}
               >
