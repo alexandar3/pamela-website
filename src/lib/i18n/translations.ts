@@ -40,6 +40,8 @@ export type Translation = {
   video: {
     mute: string;
     unmute: string;
+    previous: string;
+    next: string;
   };
   footer: {
     rights: string;
@@ -113,6 +115,8 @@ export const translations: Record<Language, Translation> = {
     video: {
       mute: "Mute",
       unmute: "Unmute",
+      previous: "Previous video",
+      next: "Next video",
     },
     footer: {
       rights: "All rights reserved.",
@@ -184,6 +188,8 @@ export const translations: Record<Language, Translation> = {
     video: {
       mute: "Utišaj",
       unmute: "Uključi zvuk",
+      previous: "Prethodni video",
+      next: "Sledeći video",
     },
     footer: {
       rights: "Sva prava zadržana.",

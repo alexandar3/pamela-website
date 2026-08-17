@@ -40,3 +40,14 @@ html {
   color: var(--foreground);
   -webkit-text-stroke: 0;
 }
+
+/* Hides the native scrollbar on the video carousel track while keeping it
+   scrollable by drag/swipe/wheel and the prev/next buttons. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

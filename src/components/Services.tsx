@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import ShowcaseVideo from "./ShowcaseVideo";
+import VideoCarousel from "./VideoCarousel";
 import LandingPageMockup from "./LandingPageMockup";
 import PriceBadge from "./PriceBadge";
 import { CALENDLY_URL, SERVICES } from "@/lib/site-config";
@@ -66,8 +66,8 @@ export default function Services() {
                 )}
               >
                 <div className="relative">
-                  {service.video ? (
-                    <ShowcaseVideo src={service.video} label={text.name} />
+                  {service.videos && service.videos.length > 0 ? (
+                    <VideoCarousel videos={service.videos} label={text.name} />
                   ) : (
                     <LandingPageMockup label={text.name} />
                   )}
