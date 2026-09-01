@@ -2,10 +2,8 @@ export type Language = "en" | "sr";
 
 export const LANGUAGES: Language[] = ["en", "sr"];
 
-type ServiceCopy = {
-  eyebrow: string;
+type TourCopy = {
   name: string;
-  copy: string;
   ctaLabel: string;
   price: string;
   stat?: string;
@@ -17,7 +15,7 @@ export type Translation = {
   };
   nav: {
     home: string;
-    services: string;
+    tours: string;
     about: string;
     contact: string;
   };
@@ -27,11 +25,20 @@ export type Translation = {
     headingHighlights: string[];
     subheading: string;
     cta: string;
+    secondaryCta: string;
   };
-  services: {
+  tour: {
     eyebrow: string;
     heading: string;
-    items: Record<string, ServiceCopy>;
+    subheading: string;
+    photosLabel: string;
+    videoLabel: string;
+    items: Record<string, TourCopy>;
+  };
+  howItWorks: {
+    eyebrow: string;
+    heading: string;
+    steps: { title: string; description: string }[];
   };
   whyAI: {
     heading: string;
@@ -55,60 +62,69 @@ export const translations: Record<Language, Translation> = {
     },
     nav: {
       home: "Home",
-      services: "Services",
+      tours: "Virtual Tours",
       about: "About",
       contact: "Contact",
     },
     hero: {
-      heading: "Add AI to your experience.",
-      headingHighlights: ["AI", "experience."],
+      heading: "Turn listing photos into an AI virtual tour.",
+      headingHighlights: ["AI virtual tour."],
       subheading:
-        "Pamela is an AI agency delivering high quality AI solutions for businesses. We help you integrate AI into your solutions.",
+        "Pamela turns the listing photos you already have into a cinematic walkthrough video — no camera, no film crew, no scheduling a shoot.",
       cta: "Book a call",
+      secondaryCta: "See an example tour",
     },
-    services: {
-      eyebrow: "Portfolio",
-      heading: "What we do",
+    tour: {
+      eyebrow: "See it in action",
+      heading: "One set of photos. One cinematic tour.",
+      subheading:
+        "Every virtual tour starts as a handful of listing photos. Here's what AI turned this villa's photos into.",
+      photosLabel: "The photos we started with",
+      videoLabel: "The AI virtual tour we delivered",
       items: {
-        "real-estate": {
-          eyebrow: "For Real Estate Agencies",
-          name: "Real Estate Videos",
-          copy: "Traditional real estate videos require a cameraman, editing, and time on location. We create high-quality cinematic property videos using AI from existing listing images—no filming required. The result is premium marketing content that captures attention, increases engagement, and helps listings stand out, while saving time and significantly reducing production costs.",
-          ctaLabel: "Get a video like this",
-          price: "From €25 / video",
-          stat: "64% report that video gives them higher confidence in making a purchase or rental decision.",
-        },
-        "ai-marketing": {
-          eyebrow: "For Businesses",
-          name: "Marketing Videos",
-          copy: "A full marketing team means salaries, contracts, and slow turnaround. We create AI marketing videos in bundles—ads, promos, social content—giving businesses a steady stream of scroll-stopping video at a fraction of the cost and speed of an in-house team or agency.",
-          ctaLabel: "Get a video like this",
+        "villa-example": {
+          name: "Luxury Villa Walkthrough",
+          ctaLabel: "Get a tour like this",
           price: "Custom pricing",
-        },
-        "landing-pages": {
-          eyebrow: "For Small & Medium Businesses",
-          name: "Building Websites",
-          copy: "Most small businesses either don't have a website or are stuck with one that hasn't been touched in years. We design and build fast, modern landing pages—from copy to layout to launch—using AI to move at a fraction of the usual cost and timeline. The result is a site that actually converts visitors into customers, live in days instead of months.",
-          ctaLabel: "Get a website like this",
-          price: "From €250",
-          stat: "75% of consumers admit to judging a business's credibility based on its website design.",
+          stat: "64% report that video gives them higher confidence in making a purchase or rental decision.",
         },
       },
     },
+    howItWorks: {
+      eyebrow: "How it works",
+      heading: "From photos to a finished tour in three steps",
+      steps: [
+        {
+          title: "Send your photos",
+          description:
+            "Share the listing photos you already have — no reshoot, no extra equipment.",
+        },
+        {
+          title: "AI builds the walkthrough",
+          description:
+            "Our models stitch the stills into a smooth, cinematic tour of the property.",
+        },
+        {
+          title: "You get a shareable video",
+          description:
+            "A polished virtual tour, ready to post or send to buyers in days.",
+        },
+      ],
+    },
     whyAI: {
-      heading: "Why AI changes the equation",
+      heading: "Why go virtual",
       items: [
         {
-          label: "Faster turnaround",
-          description: "Days, not weeks — from brief to finished clips.",
+          label: "No film crew",
+          description: "Nothing to schedule and no equipment on-site — just the photos you already have.",
         },
         {
-          label: "Lower cost per video",
-          description: "AI-driven production cuts cost without cutting quality.",
+          label: "Ready in days",
+          description: "A finished tour in days, not the weeks a full shoot and edit would take.",
         },
         {
-          label: "More iterations",
-          description: "Room to try more directions before you commit to one.",
+          label: "More engaging than photos",
+          description: "A walkthrough holds attention far longer than a static photo gallery.",
         },
       ],
     },
@@ -128,60 +144,69 @@ export const translations: Record<Language, Translation> = {
     },
     nav: {
       home: "Početna",
-      services: "Usluge",
+      tours: "Virtuelne Ture",
       about: "O nama",
       contact: "Kontakt",
     },
     hero: {
-      heading: "Unesite AI u vaše poslovanje.",
-      headingHighlights: ["AI", "poslovanje."],
+      heading: "Pretvorite fotografije oglasa u AI virtuelnu turu.",
+      headingHighlights: ["AI virtuelnu turu."],
       subheading:
-        "Pamela je AI agencija koja isporučuje visokokvalitetna AI rešenja za biznise. Pomažemo vam da integrišete AI u svoje poslovanje.",
+        "Pamela pretvara fotografije oglasa koje već imate u kinematografski video obilazak—bez kamere, bez filmske ekipe, bez zakazivanja snimanja.",
       cta: "Zakažite poziv",
+      secondaryCta: "Pogledajte primer ture",
     },
-    services: {
-      eyebrow: "Portfolio",
-      heading: "Šta radimo",
+    tour: {
+      eyebrow: "Pogledajte kako izgleda",
+      heading: "Jedan set fotografija. Jedna kinematografska tura.",
+      subheading:
+        "Svaka virtuelna tura počinje kao nekoliko fotografija oglasa. Evo u šta je AI pretvorio fotografije ove vile.",
+      photosLabel: "Fotografije od kojih smo krenuli",
+      videoLabel: "AI virtuelna tura koju smo isporučili",
       items: {
-        "real-estate": {
-          eyebrow: "Za agencije za nekretnine",
-          name: "Video Snimci Nekretnina",
-          copy: "Tradicionalni video snimci nekretnina zahtevaju snimatelja, montažu i vreme provedeno na terenu. Mi kreiramo kinematografske video snimke nekretnina uz pomoć veštačke inteligencije na osnovu postojećih fotografija oglasa—bez potrebe za snimanjem. Rezultat je premium marketinški sadržaj koji privlači pažnju, povećava angažovanost i izdvaja vaše oglase, uz uštedu vremena i značajno smanjenje troškova produkcije.",
-          ctaLabel: "Zatražite ovakav video",
-          price: "Od 25€ / video",
-          stat: "64% ispitanika kaže da im video daje veće poverenje prilikom donošenja odluke o kupovini ili iznajmljivanju.",
-        },
-        "ai-marketing": {
-          eyebrow: "Za biznise",
-          name: "Marketing Sadržaj",
-          copy: "Ceo marketinški tim znači plate, ugovore i sporu realizaciju. Mi kreiramo AI marketing video zapise u paketima—reklame, promocije, sadržaj za društvene mreže—obezbeđujući biznisima kontinuiran priliv upečatljivog video sadržaja uz mnogo nižu cenu i brže vreme isporuke od internog tima ili agencije.",
-          ctaLabel: "Zatražite ovakav video",
+        "villa-example": {
+          name: "Obilazak Luksuzne Vile",
+          ctaLabel: "Zatražite ovakvu turu",
           price: "Po dogovoru",
-        },
-        "landing-pages": {
-          eyebrow: "Za mala i srednja preduzeća",
-          name: "Izrada Web Sajtova",
-          copy: "Većina malih biznisa ili nema sajt ili koristi onaj koji nije menjan godinama. Mi dizajniramo i izrađujemo brze, moderne landing stranice—od teksta, preko dizajna, do lansiranja—koristeći AI da bismo radili mnogo brže i jeftinije nego inače. Rezultat je sajt koji zaista pretvara posetioce u kupce, dostupan za nekoliko dana umesto meseci.",
-          ctaLabel: "Zatražite ovakav sajt",
-          price: "Od 250€",
-          stat: "75% potrošača priznaje da procenjuje kredibilitet biznisa na osnovu dizajna njegovog sajta.",
+          stat: "64% ispitanika kaže da im video daje veće poverenje prilikom donošenja odluke o kupovini ili iznajmljivanju.",
         },
       },
     },
+    howItWorks: {
+      eyebrow: "Kako funkcioniše",
+      heading: "Od fotografija do gotove ture u tri koraka",
+      steps: [
+        {
+          title: "Pošaljite fotografije",
+          description:
+            "Podelite fotografije oglasa koje već imate—bez ponovnog snimanja, bez dodatne opreme.",
+        },
+        {
+          title: "AI kreira obilazak",
+          description:
+            "Naši modeli spajaju fotografije u glatku, kinematografsku turu nekretnine.",
+        },
+        {
+          title: "Dobijate video za deljenje",
+          description:
+            "Doteran virtuelni obilazak, spreman za objavu ili slanje kupcima za nekoliko dana.",
+        },
+      ],
+    },
     whyAI: {
-      heading: "Zašto veštačka inteligencija menja pravila igre",
+      heading: "Zašto virtuelno",
       items: [
         {
-          label: "Brža isporuka",
-          description: "Dani, ne nedelje — od brifa do gotovih klipova.",
+          label: "Bez filmske ekipe",
+          description: "Ništa za zakazivanje i bez opreme na terenu—samo fotografije koje već imate.",
         },
         {
-          label: "Niža cena po videu",
-          description: "Produkcija uz pomoć AI smanjuje troškove bez kompromisa u kvalitetu.",
+          label: "Gotovo za nekoliko dana",
+          description: "Gotova tura za nekoliko dana, ne nedelje koliko bi trajalo pravo snimanje i montaža.",
         },
         {
-          label: "Više iteracija",
-          description: "Prostor da isprobate više pravaca pre nego što se odlučite.",
+          label: "Angažovanije od fotografija",
+          description: "Obilazak zadržava pažnju mnogo duže od statične galerije fotografija.",
         },
       ],
     },

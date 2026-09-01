@@ -65,7 +65,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          className="mt-10 flex justify-center"
+          className="mt-10 flex flex-col items-center gap-4"
         >
           <a
             href={CALENDLY_URL}
@@ -75,6 +75,13 @@ export default function Hero() {
           >
             {t.hero.cta}
             <span aria-hidden>→</span>
+          </a>
+          <a
+            href="#tour"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-400 transition-colors hover:text-neutral-100"
+          >
+            {t.hero.secondaryCta}
+            <span aria-hidden>↓</span>
           </a>
         </motion.div>
       </div>
