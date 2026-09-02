@@ -30,36 +30,52 @@ export const TOURS: TourExample[] = [
     video: "/videos/main.mp4",
     photos: [
       {
-        src: "/images/tours/villa-example/drone.jpg",
-        alt: "Aerial drone view of the villa and pool",
+        src: "/images/tours/villa-example/1.jpg",
+        alt: "Aerial drone view of the villa, pool, and driveway",
       },
       {
-        src: "/images/tours/villa-example/pool.jpg",
-        alt: "Villa exterior with pool and sun loungers",
+        src: "/images/tours/villa-example/2.jpg",
+        alt: "Angled aerial view of the villa exterior and pool",
       },
       {
-        src: "/images/tours/villa-example/outdoor-kitchen.jpg",
-        alt: "Outdoor kitchen and dining area",
+        src: "/images/tours/villa-example/3.jpg",
+        alt: "Covered outdoor lounge and dining terrace",
       },
       {
-        src: "/images/tours/villa-example/hallway.jpg",
-        alt: "Glass-walled hallway",
+        src: "/images/tours/villa-example/4.jpg",
+        alt: "Outdoor kitchen with grill and sink",
       },
       {
-        src: "/images/tours/villa-example/bedroom-1.jpg",
-        alt: "Bedroom with gold accent wall",
+        src: "/images/tours/villa-example/5.jpg",
+        alt: "Dining room set for a large group",
       },
       {
-        src: "/images/tours/villa-example/bedroom-2.jpg",
-        alt: "Bedroom with a pool-view balcony",
+        src: "/images/tours/villa-example/6.jpg",
+        alt: "Open-plan living and dining area with garden view",
       },
       {
-        src: "/images/tours/villa-example/bathroom.jpg",
-        alt: "Bathroom with freestanding tub",
+        src: "/images/tours/villa-example/7.jpg",
+        alt: "Living and dining area in the evening",
       },
       {
-        src: "/images/tours/villa-example/living-room.jpg",
-        alt: "Living room in the evening",
+        src: "/images/tours/villa-example/8.jpg",
+        alt: "Glass-walled hallway lined with palms",
+      },
+      {
+        src: "/images/tours/villa-example/10.jpg",
+        alt: "Bedroom with a gold accent wall and ensuite bathroom",
+      },
+      {
+        src: "/images/tours/villa-example/11.jpg",
+        alt: "Bathroom with a round backlit mirror and freestanding tub",
+      },
+      {
+        src: "/images/tours/villa-example/12.jpg",
+        alt: "Bedroom with a balcony overlooking the pool",
+      },
+      {
+        src: "/images/tours/villa-example/13.jpg",
+        alt: "Villa exterior and pool lit up at night",
       },
     ],
   },

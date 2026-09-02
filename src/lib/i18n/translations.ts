@@ -30,6 +30,8 @@ export type Translation = {
   tour: {
     eyebrow: string;
     heading: string;
+    // Trailing phrase of the heading, rendered in the accent color.
+    headingHighlight: string;
     subheading: string;
     photosLabel: string;
     videoLabel: string;
@@ -75,10 +77,11 @@ export const translations: Record<Language, Translation> = {
       secondaryCta: "See an example tour",
     },
     tour: {
-      eyebrow: "See it in action",
-      heading: "One set of photos. One cinematic tour.",
+      eyebrow: "Photos → Tour",
+      heading: "Watch these photos become",
+      headingHighlight: "a movie.",
       subheading:
-        "Every virtual tour starts as a handful of listing photos. Here's what AI turned this villa's photos into.",
+        "Real photos from a real listing — scroll down for the AI-built tour we delivered from them.",
       photosLabel: "The photos we started with",
       videoLabel: "The AI virtual tour we delivered",
       items: {
@@ -157,10 +160,11 @@ export const translations: Record<Language, Translation> = {
       secondaryCta: "Pogledajte primer ture",
     },
     tour: {
-      eyebrow: "Pogledajte kako izgleda",
-      heading: "Jedan set fotografija. Jedna kinematografska tura.",
+      eyebrow: "Fotografije → Tura",
+      heading: "Gledajte kako fotografije postaju",
+      headingHighlight: "film.",
       subheading:
-        "Svaka virtuelna tura počinje kao nekoliko fotografija oglasa. Evo u šta je AI pretvorio fotografije ove vile.",
+        "Prave fotografije sa pravog oglasa — pomerite se nadole do AI ture koju smo napravili od njih.",
       photosLabel: "Fotografije od kojih smo krenuli",
       videoLabel: "AI virtuelna tura koju smo isporučili",
       items: {

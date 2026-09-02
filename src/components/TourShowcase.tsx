@@ -56,13 +56,14 @@ export default function TourShowcase() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          <p className="text-sm font-medium uppercase tracking-widest text-neutral-500">
+          <span className="inline-flex items-center rounded-full border border-amber-300/40 bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-300">
             {t.tour.eyebrow}
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-neutral-50 sm:text-4xl">
-            {t.tour.heading}
+          </span>
+          <h2 className="mt-5 font-display text-4xl font-extrabold tracking-tight text-neutral-50 sm:text-5xl">
+            {t.tour.heading}{" "}
+            <span className="text-amber-300">{t.tour.headingHighlight}</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-neutral-400">
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-neutral-300">
             {t.tour.subheading}
           </p>
         </motion.div>
