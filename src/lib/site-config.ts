@@ -8,6 +8,10 @@ export const CONTACT_EMAIL = "apopovic997@gmail.com";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/pamelatech.ai/";
 
+export const WHATSAPP_NUMBER = "+381 65 3777047";
+
+export const WHATSAPP_URL = "https://wa.me/381653777047";
+
 export type TourPhoto = {
   src: string;
   alt: string;

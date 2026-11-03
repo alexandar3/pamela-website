@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Logo from "./Logo";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { LANGUAGES } from "@/lib/i18n/translations";
+import { WHATSAPP_URL } from "@/lib/site-config";
 
 const SECTIONS = ["top", "tour", "about", "contact"] as const;
 
@@ -69,11 +70,16 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
 
-  const links: { id: (typeof SECTIONS)[number]; href: string; label: string }[] = [
+  const links: {
+    id: (typeof SECTIONS)[number];
+    href: string;
+    label: string;
+    external?: boolean;
+  }[] = [
     { id: "top", href: "#top", label: t.nav.home },
     { id: "tour", href: "#tour", label: t.nav.tours },
     { id: "about", href: "#about", label: t.nav.about },
-    { id: "contact", href: "#contact", label: t.nav.contact },
+    { id: "contact", href: WHATSAPP_URL, label: t.nav.contact, external: true },
   ];
 
   return (
@@ -95,6 +101,8 @@ export default function Header() {
             <a
               key={link.id}
               href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
               className={clsx(
                 "rounded-full px-4 py-1.5 transition-colors",
                 active === link.id
