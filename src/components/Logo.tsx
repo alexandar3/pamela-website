@@ -1,6 +1,8 @@
 import clsx from "clsx";
 
 // A single open ring with a lead dot — a minimal mark for a 360° AI tour.
+// The ring follows the surrounding text color; the lead dot always stays
+// the accent color, which is reserved for small hits of color like this.
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden className={className}>
@@ -9,7 +11,7 @@ export function LogoMark({ className }: { className?: string }) {
         cy="16"
         r="11"
         fill="none"
-        stroke="var(--accent)"
+        stroke="currentColor"
         strokeWidth="3"
         strokeLinecap="round"
         strokeDasharray="53.8 15.3"
@@ -24,7 +26,7 @@ export default function Logo({ className }: { className?: string }) {
   return (
     <span
       className={clsx(
-        "inline-flex items-center gap-2 font-display text-xl font-extrabold tracking-tight text-neutral-50",
+        "inline-flex items-center gap-2 font-display text-xl font-extrabold tracking-tight text-neutral-950",
         className,
       )}
     >

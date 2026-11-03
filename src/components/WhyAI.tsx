@@ -30,7 +30,7 @@ export default function WhyAI() {
   return (
     <section
       id="about"
-      className="scroll-mt-24 border-y border-white/10 bg-white/[0.02] px-6 py-16"
+      className="scroll-mt-24 border-y border-black/10 bg-neutral-50 px-6 py-16"
     >
       <div className="mx-auto max-w-6xl">
         <motion.h2
@@ -38,7 +38,7 @@ export default function WhyAI() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center font-display text-3xl font-extrabold tracking-tight text-neutral-50 sm:text-4xl"
+          className="text-center font-display text-3xl font-extrabold tracking-tight text-neutral-950 sm:text-4xl"
         >
           {t.whyAI.heading}
         </motion.h2>
@@ -60,11 +60,11 @@ export default function WhyAI() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
-                className="text-neutral-300"
+                className="text-neutral-950"
               >
                 {VALUE_PROP_ICONS[i]}
               </svg>
-              <p className="mt-4 font-medium text-neutral-100">
+              <p className="mt-4 font-medium text-neutral-900">
                 {prop.label}
               </p>
               <p className="mt-1.5 text-sm text-neutral-500">

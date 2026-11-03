@@ -26,13 +26,13 @@ export default function Image() {
               cy="16"
               r="11"
               fill="none"
-              stroke="#ff7a29"
+              stroke="#00e0d6"
               strokeWidth="3"
               strokeLinecap="round"
               strokeDasharray="53.8 15.3"
               transform="rotate(-110 16 16)"
             />
-            <circle cx="12.2" cy="5.7" r="1.7" fill="#ff7a29" />
+            <circle cx="12.2" cy="5.7" r="1.7" fill="#00e0d6" />
           </svg>
           <span
             style={{
@@ -50,7 +50,7 @@ export default function Image() {
             marginTop: 22,
             fontSize: 32,
             fontWeight: 500,
-            color: "#ff7a29",
+            color: "#00e0d6",
             letterSpacing: "0.04em",
             textTransform: "uppercase",
           }}

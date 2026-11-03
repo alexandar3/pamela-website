@@ -9,16 +9,12 @@ import { useLanguage } from "@/lib/i18n/LanguageProvider";
 function StatQuote({ stat }: { stat: string }) {
   const match = stat.match(/^(\d+%)\s*(.*)$/);
   if (!match) {
-    return (
-      <p className="text-sm italic leading-relaxed text-accent/90">
-        “{stat}”
-      </p>
-    );
+    return <p className="text-sm italic leading-relaxed text-neutral-600">“{stat}”</p>;
   }
   const [, figure, rest] = match;
   return (
-    <p className="text-sm italic leading-relaxed text-accent/90">
-      <span className="mr-1.5 font-display text-lg font-medium not-italic text-accent">
+    <p className="text-sm italic leading-relaxed text-neutral-600">
+      <span className="mr-1.5 font-display text-lg font-medium not-italic text-neutral-950">
         {figure}
       </span>
       {rest}
@@ -29,8 +25,8 @@ function StatQuote({ stat }: { stat: string }) {
 function TransformBadge() {
   return (
     <div className="relative my-12 flex items-center justify-center" aria-hidden>
-      <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-      <div className="relative flex items-center gap-2 rounded-full border border-accent/40 bg-neutral-950 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-accent">
+      <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-black/10 to-transparent" />
+      <div className="relative flex items-center gap-2 rounded-full border border-neutral-950 bg-neutral-950 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white">
         <motion.span
           className="h-1.5 w-1.5 rounded-full bg-accent"
           animate={{ opacity: [1, 0.3, 1] }}
@@ -55,7 +51,7 @@ export default function TourShowcase() {
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
+          <span className="inline-flex items-center rounded-full border border-neutral-950 bg-neutral-950 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white">
             {t.tour.eyebrow}
           </span>
         </motion.div>
@@ -70,7 +66,7 @@ export default function TourShowcase() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="text-center font-display text-xl font-extrabold tracking-tight text-neutral-50"
+                  className="text-center font-display text-xl font-extrabold tracking-tight text-neutral-950"
                 >
                   {text.name}
                 </motion.p>
@@ -86,7 +82,7 @@ export default function TourShowcase() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-80px" }}
                       transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
-                      className="group aspect-[4/3] overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-white/10"
+                      className="group aspect-[4/3] overflow-hidden rounded-xl bg-neutral-100 ring-1 ring-black/10"
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -111,7 +107,7 @@ export default function TourShowcase() {
 
                 <div className="mt-10 flex flex-col items-center gap-6 text-center">
                   {text.stat && (
-                    <div className="max-w-md border-l-2 border-accent/50 pl-4 text-left">
+                    <div className="max-w-md border-l-2 border-neutral-950/70 pl-4 text-left">
                       <StatQuote stat={text.stat} />
                     </div>
                   )}
@@ -119,7 +115,7 @@ export default function TourShowcase() {
                     href={CALENDLY_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-neutral-100 transition-colors hover:bg-white/10"
+                    className="inline-flex items-center gap-2 rounded-full border border-neutral-950 px-5 py-2.5 text-sm font-medium text-neutral-950 transition-colors hover:bg-neutral-950 hover:text-white"
                   >
                     {text.ctaLabel}
                     <span aria-hidden>→</span>

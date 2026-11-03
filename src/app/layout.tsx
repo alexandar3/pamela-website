@@ -64,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-background text-neutral-100">
+      <body className="min-h-full flex flex-col bg-background text-neutral-900">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

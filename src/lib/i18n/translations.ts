@@ -21,11 +21,20 @@ export type Translation = {
   };
   hero: {
     heading: string;
-    // Substrings of `heading` to render as solid white instead of outlined.
+    // Substrings of `heading` to render bold instead of regular weight.
     headingHighlights: string[];
     subheading: string;
     cta: string;
     secondaryCta: string;
+    stats: { value: string; label: string }[];
+    chart: {
+      title: string;
+      a: { label: string; days: number };
+      b: { label: string; days: number };
+    };
+    processTitle: string;
+    processLink: string;
+    badge: string;
   };
   tour: {
     eyebrow: string;
@@ -75,6 +84,18 @@ export const translations: Record<Language, Translation> = {
         "Pamela turns the listing photos you already have into a cinematic walkthrough video — no camera, no film crew, no scheduling a shoot.",
       cta: "Book a call",
       secondaryCta: "See an example tour",
+      stats: [
+        { value: "5×", label: "Longer time buyers spend on listings with a tour" },
+        { value: "87%", label: "More views than photo-only listings" },
+      ],
+      chart: {
+        title: "Turnaround time",
+        a: { label: "Traditional shoot", days: 12 },
+        b: { label: "Pamela AI tour", days: 3 },
+      },
+      processTitle: "How it works",
+      processLink: "See the full process",
+      badge: "AI virtual tour",
     },
     tour: {
       eyebrow: "Photos → Tour",
@@ -158,6 +179,18 @@ export const translations: Record<Language, Translation> = {
         "Pamela pretvara fotografije oglasa koje već imate u kinematografski video obilazak—bez kamere, bez filmske ekipe, bez zakazivanja snimanja.",
       cta: "Zakažite poziv",
       secondaryCta: "Pogledajte primer ture",
+      stats: [
+        { value: "5×", label: "Duže vreme koje kupci provedu na oglasu sa turom" },
+        { value: "87%", label: "Više pregleda u odnosu na oglase samo sa fotografijama" },
+      ],
+      chart: {
+        title: "Vreme izrade",
+        a: { label: "Klasično snimanje", days: 12 },
+        b: { label: "Pamela AI tura", days: 3 },
+      },
+      processTitle: "Kako funkcioniše",
+      processLink: "Pogledajte ceo proces",
+      badge: "AI virtuelna tura",
     },
     tour: {
       eyebrow: "Fotografije → Tura",

@@ -23,13 +23,13 @@ export default function AppleIcon() {
             cy="16"
             r="11"
             fill="none"
-            stroke="#ff7a29"
+            stroke="#00e0d6"
             strokeWidth="3.4"
             strokeLinecap="round"
             strokeDasharray="53.8 15.3"
             transform="rotate(-110 16 16)"
           />
-          <circle cx="12.2" cy="5.7" r="1.9" fill="#ff7a29" />
+          <circle cx="12.2" cy="5.7" r="1.9" fill="#00e0d6" />
         </svg>
       </div>
     ),

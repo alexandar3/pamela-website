@@ -5,11 +5,11 @@
     cy="32"
     r="22"
     fill="none"
-    stroke="#ff7a29"
+    stroke="#00e0d6"
     stroke-width="6"
     stroke-linecap="round"
     stroke-dasharray="107.5 30.7"
     transform="rotate(-110 32 32)"
   />
-  <circle cx="24.3" cy="11.4" r="3.4" fill="#ff7a29" />
+  <circle cx="24.3" cy="11.4" r="3.4" fill="#00e0d6" />
 </svg>

@@ -8,7 +8,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer id="contact" className="scroll-mt-24 border-t border-white/10 px-6 py-12">
+    <footer id="contact" className="scroll-mt-24 border-t border-black/10 px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
         <Logo />
 
@@ -18,7 +18,7 @@ export default function Footer() {
               href={`mailto:${CONTACT_EMAIL}`}
               title={CONTACT_EMAIL}
               aria-label={`Email ${CONTACT_EMAIL}`}
-              className="rounded-full p-2 text-neutral-500 transition-colors hover:bg-white/10 hover:text-neutral-100"
+              className="rounded-full p-2 text-neutral-500 transition-colors hover:bg-black/5 hover:text-neutral-950"
             >
               <svg
                 width="20"
@@ -38,7 +38,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="Pamela on Instagram"
               aria-label="Pamela on Instagram"
-              className="rounded-full p-2 text-neutral-500 transition-colors hover:bg-white/10 hover:text-neutral-100"
+              className="rounded-full p-2 text-neutral-500 transition-colors hover:bg-black/5 hover:text-neutral-950"
             >
               <svg
                 width="20"
