@@ -51,6 +51,11 @@ export type Translation = {
     heading: string;
     steps: { title: string; description: string }[];
   };
+  about: {
+    eyebrow: string;
+    heading: string;
+    paragraphs: string[];
+  };
   whyAI: {
     heading: string;
     items: { label: string; description: string }[];
@@ -133,6 +138,14 @@ export const translations: Record<Language, Translation> = {
           description:
             "A polished virtual tour, ready to post or send to buyers in days.",
         },
+      ],
+    },
+    about: {
+      eyebrow: "About Pamela",
+      heading: "AI-built virtual tours for every listing",
+      paragraphs: [
+        "Pamela is an AI video studio built for real estate. We take the listing photos an agent already has and turn them into a cinematic, walkthrough-style tour — no camera crew, no scheduling a shoot, no waiting weeks for an edit.",
+        "Our goal is to make a high-quality virtual tour something every listing can have, not just the ones that can afford a videographer. That means agencies can show every property at its best, keep buyers engaged longer, and move listings faster — without adding cost or complexity to how they already work.",
       ],
     },
     whyAI: {
@@ -228,6 +241,14 @@ export const translations: Record<Language, Translation> = {
           description:
             "Doteran virtuelni obilazak, spreman za objavu ili slanje kupcima za nekoliko dana.",
         },
+      ],
+    },
+    about: {
+      eyebrow: "O nama",
+      heading: "AI virtuelne ture za svaki oglas",
+      paragraphs: [
+        "Pamela je AI video studio napravljen za nekretnine. Uzimamo fotografije oglasa koje agent već ima i pretvaramo ih u kinematografsku turu u formi obilaska—bez filmske ekipe, bez zakazivanja snimanja, bez čekanja nedeljama na montažu.",
+        "Naš cilj je da kvalitetna virtuelna tura bude dostupna svakom oglasu, ne samo onima koji mogu da priušte snimatelja. To znači da agencije mogu da prikažu svaku nekretninu u najboljem svetlu, zadrže pažnju kupaca duže i brže prodaju ili izdaju nekretnine—bez dodatnog troška ili komplikacija u načinu na koji već rade.",
       ],
     },
     whyAI: {

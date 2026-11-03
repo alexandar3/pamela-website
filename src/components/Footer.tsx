@@ -54,6 +54,12 @@ export default function Footer() {
               </svg>
             </a>
           </div>
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="font-medium text-neutral-700 transition-colors hover:text-neutral-950"
+          >
+            {CONTACT_EMAIL}
+          </a>
           <p>
             © {new Date().getFullYear()} Pamela. {t.footer.rights}
           </p>

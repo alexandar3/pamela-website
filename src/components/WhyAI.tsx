@@ -28,10 +28,7 @@ export default function WhyAI() {
   const { t } = useLanguage();
 
   return (
-    <section
-      id="about"
-      className="scroll-mt-24 border-y border-black/10 bg-neutral-50 px-6 py-16"
-    >
+    <section className="border-y border-black/10 bg-neutral-50 px-6 py-16">
       <div className="mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
