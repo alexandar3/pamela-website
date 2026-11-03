@@ -26,6 +26,7 @@ export type Translation = {
     subheading: string;
     cta: string;
     secondaryCta: string;
+    chatCta: string;
     stats: { value: string; label: string }[];
     chart: {
       title: string;
@@ -89,6 +90,7 @@ export const translations: Record<Language, Translation> = {
         "Pamela turns the listing photos you already have into a cinematic walkthrough video — no camera, no film crew, no scheduling a shoot.",
       cta: "Book a call",
       secondaryCta: "See an example tour",
+      chatCta: "Chat with us",
       stats: [
         { value: "5×", label: "Longer time buyers spend on listings with a tour" },
         { value: "87%", label: "More views than photo-only listings" },
@@ -192,6 +194,7 @@ export const translations: Record<Language, Translation> = {
         "Pamela pretvara fotografije oglasa koje već imate u kinematografski video obilazak—bez kamere, bez filmske ekipe, bez zakazivanja snimanja.",
       cta: "Zakažite poziv",
       secondaryCta: "Pogledajte primer ture",
+      chatCta: "Pišite nam",
       stats: [
         { value: "5×", label: "Duže vreme koje kupci provedu na oglasu sa turom" },
         { value: "87%", label: "Više pregleda u odnosu na oglase samo sa fotografijama" },
