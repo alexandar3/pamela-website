@@ -47,28 +47,20 @@ export default function TourShowcase() {
   const { t } = useLanguage();
 
   return (
-    <section id="tour" className="scroll-mt-24 px-6 py-28 sm:py-36">
+    <section id="tour" className="scroll-mt-24 px-6 pb-24">
       <div className="mx-auto max-w-5xl">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
           <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
             {t.tour.eyebrow}
           </span>
-          <h2 className="mt-5 font-display text-4xl font-extrabold tracking-tight text-neutral-50 sm:text-5xl">
-            {t.tour.heading}{" "}
-            <span className="text-accent">{t.tour.headingHighlight}</span>
-          </h2>
-          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-neutral-300">
-            {t.tour.subheading}
-          </p>
         </motion.div>
 
-        <div className="mt-20 flex flex-col gap-28">
+        <div className="mt-10 flex flex-col gap-28">
           {TOURS.map((tour) => {
             const text = t.tour.items[tour.slug];
             return (

@@ -7,7 +7,7 @@ export default function HowItWorks() {
   const { t } = useLanguage();
 
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-16">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -24,7 +24,7 @@ export default function HowItWorks() {
           </h2>
         </motion.div>
 
-        <div className="mt-16 grid gap-10 sm:grid-cols-3">
+        <div className="mt-12 grid gap-10 sm:grid-cols-3">
           {t.howItWorks.steps.map((step, i) => (
             <motion.div
               key={step.title}

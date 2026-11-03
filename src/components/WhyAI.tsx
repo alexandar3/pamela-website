@@ -30,7 +30,7 @@ export default function WhyAI() {
   return (
     <section
       id="about"
-      className="scroll-mt-24 border-y border-white/10 bg-white/[0.02] px-6 py-24"
+      className="scroll-mt-24 border-y border-white/10 bg-white/[0.02] px-6 py-16"
     >
       <div className="mx-auto max-w-6xl">
         <motion.h2
@@ -43,7 +43,7 @@ export default function WhyAI() {
           {t.whyAI.heading}
         </motion.h2>
 
-        <div className="mt-16 grid gap-10 sm:grid-cols-3">
+        <div className="mt-12 grid gap-10 sm:grid-cols-3">
           {t.whyAI.items.map((prop, i) => (
             <motion.div
               key={prop.label}
