@@ -35,8 +35,7 @@ export default function Hero() {
       className="relative flex min-h-screen scroll-mt-24 items-center overflow-hidden px-6 pt-32 pb-24"
     >
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/3 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-indigo-500/25 via-fuchsia-400/15 to-transparent blur-3xl" />
-        <div className="absolute right-0 bottom-0 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-sky-400/15 to-transparent blur-3xl" />
+        <div className="absolute left-1/2 top-1/3 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-4xl text-center">

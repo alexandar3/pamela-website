@@ -34,7 +34,7 @@ export default function HowItWorks() {
               transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
               className="flex flex-col items-center text-center"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-amber-300/40 bg-amber-300/10 font-display text-sm font-extrabold text-amber-300">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-display text-sm font-extrabold text-accent">
                 {i + 1}
               </span>
               <p className="mt-4 font-medium text-neutral-100">{step.title}</p>

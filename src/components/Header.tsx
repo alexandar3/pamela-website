@@ -52,7 +52,7 @@ export default function Header() {
       className={clsx(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
         scrolled
-          ? "bg-[#0a0a0b]/80 backdrop-blur-md border-b border-white/10"
+          ? "bg-background/80 backdrop-blur-md border-b border-white/10"
           : "bg-transparent border-b border-transparent",
       )}
     >

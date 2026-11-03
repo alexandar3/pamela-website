@@ -10,9 +10,9 @@ const poppins = Poppins({
   weight: ["400", "500", "800"],
 });
 
-const TITLE = "Pamela — AI Agency | AI Marketing & Real Estate Video Production";
+const TITLE = "Pamela AI Virtual Tours";
 const DESCRIPTION =
-  "Pamela is an AI agency (AI agencija) creating cinematic real estate videos, bundled AI marketing videos, and landing pages for businesses — faster and cheaper than a traditional production team.";
+  "Pamela turns real estate listing photos into cinematic AI-built virtual tour videos — no camera, no film crew, no shoot to schedule.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -20,11 +20,10 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: [
     "Pamela",
-    "Pamela agencija",
-    "AI agency",
-    "AI agencija",
-    "AI marketing videos",
-    "real estate video production",
+    "AI virtual tours",
+    "AI real estate video",
+    "virtual tour video",
+    "listing video",
     "AI video production",
   ],
   alternates: {
@@ -36,13 +35,11 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Pamela",
     type: "website",
-    images: ["/images/logo.png"],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/images/logo.png"],
   },
   robots: {
     index: true,
@@ -55,7 +52,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "Pamela",
   url: SITE_URL,
-  logo: `${SITE_URL}/images/logo.png`,
+  logo: `${SITE_URL}/images/logo.svg`,
   description: DESCRIPTION,
   sameAs: [INSTAGRAM_URL],
 };
@@ -67,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-[#0a0a0b] text-neutral-100">
+      <body className="min-h-full flex flex-col bg-background text-neutral-100">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

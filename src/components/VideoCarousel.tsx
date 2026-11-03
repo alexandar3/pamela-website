@@ -111,7 +111,7 @@ export default function VideoCarousel({
                 aria-label={`${label} ${i + 1}/${videos.length}`}
                 aria-current={i === activeIndex}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === activeIndex ? "w-5 bg-amber-400" : "w-1.5 bg-white/40 hover:bg-white/70"
+                  i === activeIndex ? "w-5 bg-accent" : "w-1.5 bg-white/40 hover:bg-white/70"
                 }`}
               />
             ))}

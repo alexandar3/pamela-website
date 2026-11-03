@@ -10,15 +10,15 @@ function StatQuote({ stat }: { stat: string }) {
   const match = stat.match(/^(\d+%)\s*(.*)$/);
   if (!match) {
     return (
-      <p className="text-sm italic leading-relaxed text-amber-300/90">
+      <p className="text-sm italic leading-relaxed text-accent/90">
         “{stat}”
       </p>
     );
   }
   const [, figure, rest] = match;
   return (
-    <p className="text-sm italic leading-relaxed text-amber-300/90">
-      <span className="mr-1.5 font-display text-lg font-medium not-italic text-amber-300">
+    <p className="text-sm italic leading-relaxed text-accent/90">
+      <span className="mr-1.5 font-display text-lg font-medium not-italic text-accent">
         {figure}
       </span>
       {rest}
@@ -30,9 +30,9 @@ function TransformBadge() {
   return (
     <div className="relative my-12 flex items-center justify-center" aria-hidden>
       <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-      <div className="relative flex items-center gap-2 rounded-full border border-amber-300/40 bg-neutral-950 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-amber-300">
+      <div className="relative flex items-center gap-2 rounded-full border border-accent/40 bg-neutral-950 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-accent">
         <motion.span
-          className="h-1.5 w-1.5 rounded-full bg-amber-300"
+          className="h-1.5 w-1.5 rounded-full bg-accent"
           animate={{ opacity: [1, 0.3, 1] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -56,12 +56,12 @@ export default function TourShowcase() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="inline-flex items-center rounded-full border border-amber-300/40 bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-300">
+          <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
             {t.tour.eyebrow}
           </span>
           <h2 className="mt-5 font-display text-4xl font-extrabold tracking-tight text-neutral-50 sm:text-5xl">
             {t.tour.heading}{" "}
-            <span className="text-amber-300">{t.tour.headingHighlight}</span>
+            <span className="text-accent">{t.tour.headingHighlight}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-neutral-300">
             {t.tour.subheading}
@@ -119,7 +119,7 @@ export default function TourShowcase() {
 
                 <div className="mt-10 flex flex-col items-center gap-6 text-center">
                   {text.stat && (
-                    <div className="max-w-md border-l-2 border-amber-400/50 pl-4 text-left">
+                    <div className="max-w-md border-l-2 border-accent/50 pl-4 text-left">
                       <StatQuote stat={text.stat} />
                     </div>
                   )}
