@@ -116,7 +116,7 @@ export const translations: Record<Language, Translation> = {
         "villa-example": {
           name: "Luxury Villa Walkthrough",
           ctaLabel: "Get a tour like this",
-          price: "From $20/video",
+          price: "From €20/video",
           stat: "64% report that video gives them higher confidence in making a purchase or rental decision.",
         },
       },
@@ -220,7 +220,7 @@ export const translations: Record<Language, Translation> = {
         "villa-example": {
           name: "Obilazak Luksuzne Vile",
           ctaLabel: "Zatražite ovakvu turu",
-          price: "Od $20/video",
+          price: "Od 20€/video",
           stat: "64% ispitanika kaže da im video daje veće poverenje prilikom donošenja odluke o kupovini ili iznajmljivanju.",
         },
       },
